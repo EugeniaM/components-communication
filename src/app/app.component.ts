@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  todos = [];
+  newTodoTitle = '';
+  newTodoDescription = '';
+
+  onAddTodo() {
+    this.todos.push({
+      title: this.newTodoTitle,
+      description: this.newTodoDescription
+    });
+  }
 }
