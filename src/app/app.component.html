@@ -1,30 +1,11 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h3>Add new TODO</h3>
-      <label>Title</label>
-      <input type="text" class="form-control" [(ngModel)]="newTodoTitle">
-      <label>Description</label>
-      <input type="text" class="form-control" [(ngModel)]="newTodoDescription">
-      <br>
-      <button
-        class="btn btn-primary"
-        (click)="onAddTodo()">
-        Add TODO
-      </button>
-    </div>
-  </div>
+  <app-add-todo (onAddTodo)="onTodoAdded($event)"></app-add-todo>
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <div
-        class="panel panel-primary"
-        *ngFor="let todo of todos">
-        <div class="panel-heading">{{ todo.title }}</div>
-        <div class="panel-body">
-          <strong>{{ todo.description }}</strong>
-        </div>
-      </div>
+    <app-todo *ngFor="let todoElem of todos" [todo]="todoElem">
+      <strong>{{ todoElem.description }}</strong>
+    </app-todo>
     </div>
   </div>
 </div>
