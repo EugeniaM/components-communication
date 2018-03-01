@@ -20,4 +20,12 @@ export class AppComponent {
       description: todoData.newTodoDesc
     });
   }
+
+  onChange1Todo() {
+    this.todos[0].title = 'New Title!';
+  }
+
+  onDelete1Todo() {
+    this.todos.splice(0, 1);
+  }
 }

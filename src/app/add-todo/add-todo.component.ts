@@ -22,5 +22,4 @@ export class AddTodoComponent implements OnInit {
       newTodoDesc: this.descriptionInput.nativeElement.value
     });
   }
-
 }

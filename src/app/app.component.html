@@ -1,11 +1,18 @@
 <div class="container">
   <app-add-todo (onAddTodo)="onTodoAdded($event)"></app-add-todo>
   <hr>
+  <button class="btn btn-success" (click)="onChange1Todo()">Change 1 todo</button>
+  <button class="btn btn-success" (click)="onDelete1Todo()">Delete 1 todo</button>
   <div class="row">
     <div class="col-xs-12">
-    <app-todo *ngFor="let todoElem of todos" [todo]="todoElem">
+    <app-todo *ngFor="let todoElem of todos" [todo]="todoElem" [title]="todoElem.title">
       <strong>{{ todoElem.description }}</strong>
     </app-todo>
     </div>
   </div>
+  <p [appCustomBorder]="'2px solid yellow'">Add me border!</p>
+  <p *ngIf="false">Add me border!</p>
+  <!--<ng-template [ngIf]="false">-->
+    <!--<p>Add me border!</p>-->
+  <!--</ng-template>-->
 </div>

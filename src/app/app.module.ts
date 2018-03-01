@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { TodoComponent } from './todo/todo.component';
+import { CustomBorderDirective } from './directives/custom-border.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTodoComponent,
-    TodoComponent
+    TodoComponent,
+    CustomBorderDirective
   ],
   imports: [
     BrowserModule,
